@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ingredient
+public class Recipe
 {
+    public int id;
     string name;
     string description;
     float cost;
     string img_name;
-
-
-    public Ingredient(string name, string description, float cost, string img_name)
+    public int typeID;
+    public string type;
+    public List <Ingredient> ingredients;
+    public Recipe(string name, string description, float cost, string img_name,  int typeID, int id)
     {
         this.name = name;
         this.description = description;
         this.cost = cost;
         this.img_name = img_name;
+        this.typeID = typeID;
+        this.id = id;
     }
 
     public string Name { get { return name; } }
@@ -23,4 +27,5 @@ public class Ingredient
     public float Cost { get { return cost; } }
     public string ImageName { get { return img_name; } }
 
+    
 }

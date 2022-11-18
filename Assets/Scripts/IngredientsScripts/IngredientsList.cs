@@ -17,7 +17,7 @@ public class IngredientsList : MonoBehaviour
     
     void Start()
     {
-        ingredients = DBManager._DB_MANAGER.GetIngredients();
+        ingredients = GameManager.instance.ingredients;
         foreach(Ingredient ingredient in ingredients)
         {
             
@@ -27,16 +27,14 @@ public class IngredientsList : MonoBehaviour
             ingredientsList.Add(ingBut.gameObject);
         }
 
-        MouseDownEvent click = new MouseDownEvent();
     }
 
     public void onClickEvent()
     {
 
 
-        ingredientPreview = new GameObject();
-        ingredientPreview.AddComponent<SpriteRenderer>().sprite = sprite;
-        ingredientPreview.AddComponent<DragAndDropHandler>();
+        
+        //ingredientPreview.AddComponent<DragAndDropHandler>();
 
        
     }
