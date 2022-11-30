@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 6302901544304752928}
   - component: {fileID: 6302901544304752929}
   - component: {fileID: 3321565075050327954}
+  - component: {fileID: 623625591180235634}
   m_Layer: 5
   m_Name: Recipe
   m_TagString: Untagged
@@ -389,6 +390,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientPreviewPref: {fileID: 0}
+--- !u!114 &623625591180235634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302901544304752943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9157ba62ce1a09546bf8a48886d438d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 4999872136613810507}
+  recipeName: {fileID: 3686362986831533758}
+  cost: {fileID: 5481785001925634788}
+  IngredientParent: {fileID: 1016342007}
 --- !u!1 &9086590654740103620
 GameObject:
   m_ObjectHideFlags: 0

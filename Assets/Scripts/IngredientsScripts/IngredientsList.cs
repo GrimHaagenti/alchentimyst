@@ -15,9 +15,9 @@ public class IngredientsList : MonoBehaviour
 
     GameObject ingredientPreview;
     
-    void Start()
+    public void InitIngredients()
     {
-        ingredients = GameManager.instance.ingredients;
+        ingredients = GameManager._GAME_MANAGER.ingredients;
         foreach(Ingredient ingredient in ingredients)
         {
             

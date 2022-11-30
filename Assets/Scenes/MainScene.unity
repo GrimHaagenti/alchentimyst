@@ -369,10 +369,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -150}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &170550659
 MonoBehaviour:
@@ -466,10 +466,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -50}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236979256
 MonoBehaviour:
@@ -1362,10 +1362,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -50}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752097431
 MonoBehaviour:
@@ -2080,10 +2080,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -150}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303248760
 MonoBehaviour:
@@ -2373,10 +2373,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -50}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476361760
 MonoBehaviour:
@@ -2493,6 +2493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58292bcd8489fd43b8fb3ce9a6ea4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _UI_MANAGER: {fileID: 2100518560}
 --- !u!1 &1523890578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,10 +2670,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -150}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618362126
 MonoBehaviour:
@@ -2978,10 +2979,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952719610
 MonoBehaviour:
@@ -3523,7 +3524,6 @@ GameObject:
   - component: {fileID: 2100518556}
   - component: {fileID: 2100518555}
   - component: {fileID: 2100518560}
-  - component: {fileID: 2100518561}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3630,20 +3630,7 @@ MonoBehaviour:
   ShowRecipesButton: {fileID: 1375355733}
   recipeButtonTemplate: {fileID: 6302901544304752943, guid: 63c7b16a70d876444bb4767f2ff003d9, type: 3}
   recipesParent: {fileID: 1015586570}
---- !u!114 &2100518561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100518554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa435bda67491094fba79507829fdc22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggedObject: {fileID: 0}
-  draggedObjectChild: {fileID: 0}
+  recipeIngredientPref: {fileID: 4699648385602150795, guid: c4ca1697e01d699478e3b35a4e9300b3, type: 3}
 --- !u!1 &2106095491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,10 +3732,10 @@ RectTransform:
   m_Father: {fileID: 2029558866}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -150}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106316409
 MonoBehaviour:

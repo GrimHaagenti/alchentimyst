@@ -149,7 +149,6 @@ GameObject:
   - component: {fileID: 5306629257614590762}
   - component: {fileID: 7180406203492717031}
   - component: {fileID: 8299910494487825191}
-  - component: {fileID: 972946043759365133}
   m_Layer: 5
   m_Name: Ingredient
   m_TagString: Untagged
@@ -295,19 +294,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &972946043759365133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5306629257614590756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa435bda67491094fba79507829fdc22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggedObject: {fileID: 0}
 --- !u!1 &6869165246891586625
 GameObject:
   m_ObjectHideFlags: 0

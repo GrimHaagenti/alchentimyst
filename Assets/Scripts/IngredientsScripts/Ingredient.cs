@@ -8,6 +8,7 @@ public class Ingredient
     string description;
     float cost;
     string img_name;
+    public Sprite icon;
 
 
     public Ingredient(string name, string description, float cost, string img_name)

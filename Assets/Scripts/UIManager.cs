@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,11 +12,11 @@ public class UIManager : MonoBehaviour
 
     static public UIManager instance;
 
-    List<Recipe> recipes;
 
     [SerializeField] GameObject recipeButtonTemplate;
     [SerializeField] GameObject recipesParent;
 
+    [SerializeField] GameObject recipeIngredientPref;
 
     private void Awake()
     {
@@ -28,24 +29,41 @@ public class UIManager : MonoBehaviour
         
         ShowRecipesButton.onClick.AddListener(() => ShowRecipes());
         recipesParent.GetComponent<Button>().onClick.AddListener(() => HideRecipes());
-        recipes = GameManager.instance.recipes;
+    }
+    public void InitUI()
+    {
+
+        GameObject parent = recipesParent.GetComponentsInChildren<RectTransform>()[1].gameObject;
+        foreach (Recipe recipe in GameManager._GAME_MANAGER.recipes)
+        {
+
+            RecipeButton recBut = Instantiate(recipeButtonTemplate, parent.transform).GetComponent<RecipeButton>();
+            recBut.initButton(recipe);
+
+            RecipeButtonAccess acc = recBut.gameObject.GetComponent<RecipeButtonAccess>();
+            
+            acc.recipeName.text = recipe.Name;
+
+            
+            acc.Icon.sprite =recipe.icon;
+            acc.cost.text = recipe.Cost.ToString();
+            recipe.ingredients.ForEach((it) =>
+            {
+                Instantiate(recipeIngredientPref, acc.IngredientParent.transform).GetComponent<TextMeshProUGUI>().text = it.Name;
+
+            });
+
+
+            //ingredientsList.Add(recBut.gameObject);
+        }
     }
 
     void ShowRecipes()
     {
-        if (recipes.Count < 1)
-        {
-            recipes = DBManager._DB_MANAGER.GetRecipes();
-            GameObject parent = recipesParent.GetComponentsInChildren<RectTransform>()[1].gameObject;
-            foreach (Recipe recipe in recipes)
-            {
-
-                RecipeButton recBut = Instantiate(recipeButtonTemplate, parent.transform).GetComponent<RecipeButton>();
-                recBut.initButton(recipe);
-
-                //ingredientsList.Add(recBut.gameObject);
-            }
-        }
+       
+           
+            
+        
         recipesParent.SetActive(true);
 
     }

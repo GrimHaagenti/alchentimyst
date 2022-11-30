@@ -11,6 +11,7 @@ public class Recipe
     string img_name;
     public int typeID;
     public string type;
+    public Sprite icon;
     public List <Ingredient> ingredients;
     public Recipe(string name, string description, float cost, string img_name,  int typeID, int id)
     {

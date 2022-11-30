@@ -51,7 +51,13 @@ public class DBManager : MonoBehaviour
 
         */
     }
+    public int CheckIfPotionCraftable(List<Ingredient> ingredients)
+    {
+        //Intersect
 
+        return 0;
+
+    }
     public List<Ingredient> GetIngredients()
     {
         string query = "SELECT * FROM ingredients";
@@ -68,8 +74,14 @@ public class DBManager : MonoBehaviour
             string ingredientName = dataReader.GetString(1);
             float cost = dataReader.GetFloat(2);
             string description = dataReader.GetString(4);
-            Ingredient ing = new Ingredient(ingredientName, description,cost, "Ingredient.png" );
+
+            Texture2D tex = Resources.Load<Texture2D>("images/Ingredient");
+            Sprite ingredientSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f), 1);
            
+            Ingredient ing = new Ingredient(ingredientName, description,cost, "Ingredient.png" );
+
+            ing.icon = ingredientSprite;
+            
           ingredients.Add(ing);
         }
 
@@ -97,8 +109,13 @@ public class DBManager : MonoBehaviour
             
             int typeID = dataReader.GetInt32(5);
 
-            Recipe rec = new Recipe(RecipeName, description, cost, "Potion.png", typeID, id);
+            Texture2D tex = Resources.Load<Texture2D>("images/Potion");
+            Sprite ingredientSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f), 1);
 
+           
+            Recipe rec = new Recipe(RecipeName, description, cost, "Potion.png", typeID, id);
+            rec.icon = ingredientSprite;
+            rec.ingredients = GetRecipeIngredients(rec);
             recipes.Add(rec);
         }
         
@@ -130,14 +147,19 @@ public class DBManager : MonoBehaviour
 
             for (int i = 0; i < dataReader.FieldCount; i++)
             {
-                Debug.Log(dataReader.GetValue(i));
-            }
-            Debug.Log("Cambio");
+                int aa = dataReader.GetInt32(i);
+                Debug.Log(aa);
 
-            //ingredients.Add(ing);
+                ingredients.Add(GameManager._GAME_MANAGER.ingredients[aa -1]);
+
+            }
+            Debug.Log("AAA");
+
+
+            
         }
 
-
+        Debug.Log("BBB");
 
         return ingredients;
     }
