@@ -17,22 +17,27 @@ public class RecipeButton : MonoBehaviour
     TextMeshProUGUI ingredientNameContainer;
     TextMeshProUGUI ingredientCostContainer;
     Button ingredientButton;
-    [SerializeField] GameObject ingredientPreviewPref;
     GameObject previewParent;
 
 
+    //ACCESSORS
+    [SerializeField] public Image Icon;
+    [SerializeField] public TextMeshProUGUI recipeName;
+    [SerializeField] public TextMeshProUGUI cost;
+    [SerializeField] public TextMeshProUGUI Description;
+    [SerializeField] public GameObject IngredientParent;
 
 
 
 
-    public void initButton(Recipe recipe)
+    public void initButton(Potion recipe)
     {
 
         ingredient_name = recipe.Name;
         ingredientCost = recipe.Cost;
-       
-        Texture2D tex = Resources.Load<Texture2D>("images/" + ingredient_img);
-        ingredientSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f), 1);
+
+
+        ingredientSprite = recipe.icon;
         Image buttonBG = GetComponent<Image>();
         switch (recipe.typeID)
         {
@@ -66,34 +71,6 @@ public class RecipeButton : MonoBehaviour
 
                 break;
         }
-        setButton();
-    }
-    void setButton()
-    {
-        
-        Transform[] gameObjects = gameObject.GetComponentsInChildren<Transform>();
-        foreach (Transform go in gameObjects)
-        {
-            if (go.name == "RecipeName")
-            {
-                ingredientNameContainer = go.GetComponent<TextMeshProUGUI>();
-            }
-            if (go.name == "Cost")
-            {
-                ingredientCostContainer = go.GetComponent<TextMeshProUGUI>();
-            }
-            if (go.name == "RecipeIcon")
-            {
-                ingredientIcon = go.GetComponent<Image>();
-
-            }
-
-        }
-        ingredientIcon.sprite = ingredientSprite;
-        ingredientNameContainer.text = ingredient_name;
-        ingredientCostContainer.text = costString + ingredientCost.ToString();
-
-
     }
     
     

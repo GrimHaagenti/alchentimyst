@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ingredient
 {
+    public int id;
     string name;
     string description;
     float cost;
@@ -11,8 +12,9 @@ public class Ingredient
     public Sprite icon;
 
 
-    public Ingredient(string name, string description, float cost, string img_name)
+    public Ingredient(int id, string name, string description, float cost, string img_name)
     {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.cost = cost;

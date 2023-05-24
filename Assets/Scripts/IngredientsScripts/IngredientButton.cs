@@ -9,19 +9,15 @@ using UnityEngine.EventSystems;
 public class IngredientButton : MonoBehaviour
 {
     
-    Image ingredientIcon;
-    TextMeshProUGUI ingredientNameContainer;
-    TextMeshProUGUI ingredientCostContainer;
-    [SerializeField] Button ingredientButton;
-    [SerializeField] GameObject ingredientPreviewPref;
-    GameObject previewParent;
-
     Ingredient Ingredient;
+
 
     //ACCESSORS
     [SerializeField] public Image Icon;
     [SerializeField] public TextMeshProUGUI Name;
     [SerializeField] public TextMeshProUGUI Cost;
+    [SerializeField] public TextMeshProUGUI Description;
+    [SerializeField] public Button ingredientButton;
 
 
 
@@ -38,31 +34,13 @@ public class IngredientButton : MonoBehaviour
     {
         Icon.sprite = Ingredient.icon;
         Name.text = Ingredient.Name;
-        Cost.text = Ingredient.Cost.ToString();
+        Cost.text = "Cost: " +Ingredient.Cost;
+        Description.text = Ingredient.Description;
     }
     
     private void Start()
     {
 
     }
-    public void OnMouseMove(PointerEventData eventData)
-    {
 
-    }
-
-    public void OnMouseDrop(PointerEventData eventData)
-    {
-        
-    }
-
-    public void OnMouseClick(PointerEventData eventData)
-    {
-
-        Debug.Log("AAAAAAAA");
-        GameObject ingredientPreview = Instantiate(ingredientPreviewPref, eventData.pointerCurrentRaycast.screenPosition, Quaternion.identity);
-        
-        ingredientPreview.GetComponent<Image>().sprite = ingredientSprite;
-        _Drag_Handler.SetDraggedObject(ingredientPreview);
-        
-;    }
 }
